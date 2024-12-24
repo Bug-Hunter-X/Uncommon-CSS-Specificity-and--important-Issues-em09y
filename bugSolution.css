@@ -1,0 +1,23 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+/* Style overrides are achieved through more specific selectors instead of !important */
+.container .box {
+  background-color: lightgreen; /*This will override the general .box style*/
+}
+
+/*More specific selector for different cases*/
+.container.special .box {
+  background-color: yellow; /*This selector is even more specific and will override the previous one*/
+}
